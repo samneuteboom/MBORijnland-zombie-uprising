@@ -17,19 +17,6 @@ a {
     color: white;
 }
 
-#bodyLevelOne {
-    font-family: 'Arial', sans-serif;
-    background-image: url(../img/ZombieLevelOne.png); 
-    background-size: cover;
-    background-position: center;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-}
-
 #menu {
     text-align: center;
 }

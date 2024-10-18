@@ -1,0 +1,12 @@
+#bodyLevelOne {
+    font-family: 'Arial', sans-serif;
+    background-image: url(../img/ZombieLevelOne.png); 
+    background-size: cover;
+    background-position: left;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}

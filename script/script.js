@@ -1,3 +1,8 @@
+// Functie die automatisch wordt uitgevoerd wanneer de pagina wordt geladen
+window.onload = function() {
+    window.open('level1.html', '_blank');  // Nieuwe tabblad of venster openen
+}
+
 // Reference to canvas and context
 const canvas = document.getElementById('gameCanvas');
 const ctx = canvas.getContext('2d');
@@ -9,19 +14,6 @@ let gameRunning = false;
 // Function to clear the canvas
 function clearCanvas() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-}
-
-// Main game loop (if needed)
-function gameLoop() {
-    if (gameRunning) {
-        clearCanvas();
-        drawPlayer();
-        drawZombie();
-
-        // Example: Move zombies, check collisions, etc.
-
-        requestAnimationFrame(gameLoop);
-    }
 }
 
 // Start game function

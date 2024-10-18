@@ -1,76 +1,81 @@
 const fallingImage = document.getElementById('lopen');
-let y = 0; // Startpositie Y
-let x = 0; // Startpositie X (gecentreerd)
+let y = 100;
+let x = -530;
 const gravity = 0.5;
-const maxSpeed = 3; // Maximale snelheid
-const groundLevel = window.innerHeight - 600; // Hoogte van de onderkant van het scherm
-const moveSpeed = 3; // Snelheid van beweging naar links/rechts
+const jumpStrength = 12;
+const maxSpeed = 6;
+const groundLevel = window.innerHeight - 650;
+const moveSpeed = 6;
 
-// Stel de snelheid in op de maximale snelheid
-let speed = maxSpeed; // Begin snelheid is nu max snelheid
-let moveLeft = false; // Beweging naar links
-let moveRight = false; // Beweging naar rechts
+let speed = maxSpeed;
+let moveLeft = false;
+let moveRight = false;
+let isJumping = false;
+let verticalSpeed = 0;
 
 function update() {
-    // Update de verticale positie van de afbeelding
-    y += speed;
-
-    // Controleer of de afbeelding de grond heeft bereikt
-    if (y >= groundLevel) {
-        y = groundLevel; // Zet de afbeelding op de grond
-        speed = 0; // Stop de snelheid
+    if (isJumping) {
+        y -= verticalSpeed; 
+        verticalSpeed -= gravity; 
     }
 
-    // Update de horizontale positie
+    if (y >= groundLevel) {
+        y = groundLevel; 
+        verticalSpeed = 0; 
+        isJumping = false; 
+    }
+
     if (moveLeft) {
-        x -= moveSpeed; // Beweeg naar links
+        x -= moveSpeed; 
+        fallingImage.style.transform = `translate(${x}px, ${y}px) scaleX(-1)`;
     }
     if (moveRight) {
-        x += moveSpeed; // Beweeg naar rechts
+        x += moveSpeed; 
+        fallingImage.style.transform = `translate(${x}px, ${y}px) scaleX(1)`;
     }
 
-    // Beperk de beweging binnen de schermgrenzen
-    if (x < -670) x = -670; // Links
-    if (x > window.innerWidth - -360) x = window.innerWidth - -360; // Rechts
+    if (x < -670) x = -670; 
+    if (x > window.innerWidth - -360) x = window.innerWidth - -360; 
 
-    // Pas de positie van de afbeelding toe
-    fallingImage.style.transform = `translate(${x}px, ${y}px)`;
+    if (!moveLeft && !moveRight) {
+        fallingImage.style.transform = `translate(${x}px, ${y}px)`;
+    }
 
-    // Scroll de window om de afbeelding in het midden te houden (constant)
     const leftOffset = window.innerWidth / 4;
     window.scrollTo(x + leftOffset, window.scrollY);
 
-    // Vraag de volgende frame aan
     requestAnimationFrame(update);
 }
 
-// Functie om de afbeelding te verplaatsen
 function moveImage(event) {
     switch (event.key) {
         case 'a':
-            moveLeft = true; // Start bewegen naar links
+            moveLeft = true; 
             break;
         case 'd':
-            moveRight = true; // Start bewegen naar rechts
+            moveRight = true; 
+            break;
+        case ' ':
+            if (!isJumping) {
+                isJumping = true; 
+                verticalSpeed = jumpStrength; 
+            }
             break;
     }
 }
 
-// Functie om de afbeelding te stoppen
 function stopImage(event) {
     switch (event.key) {
         case 'a':
-            moveLeft = false; // Stop met bewegen naar links
+            moveLeft = false; 
             break;
         case 'd':
-            moveRight = false; // Stop met bewegen naar rechts
+            moveRight = false; 
             break;
     }
 }
 
-// Voeg event listeners toe
 window.addEventListener('keydown', moveImage);
 window.addEventListener('keyup', stopImage);
 
-// Start de simulatie
-update();s
+update();

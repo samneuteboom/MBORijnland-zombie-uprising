@@ -10,3 +10,8 @@
     height: 100vh;
     margin: 0;
 }
+#lopen {
+    position: absolute; /* Hierdoor kan de afbeelding vrij bewegen */
+    width: 500px; /* Pas de grootte van de afbeelding aan */
+    height: 1100; /* Houd de verhouding van de afbeelding */
+}

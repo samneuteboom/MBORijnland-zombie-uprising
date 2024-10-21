@@ -1,0 +1,12 @@
+#bodyLevelTwo {
+    font-family: 'Lora', serif;
+    background-image: url(../img/zombie-2-3-pixilart.png); 
+    background-size: cover;
+    background-position: left;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}

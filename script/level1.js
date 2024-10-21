@@ -69,7 +69,7 @@ function moveImage(event) {
           moveLeft = false;
           break;
        case 'd':
-          moveRight = false;
+          moveRight = false;  
           break;
     }
  }

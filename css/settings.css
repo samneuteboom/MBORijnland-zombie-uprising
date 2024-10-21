@@ -39,3 +39,10 @@ input[type=range] {
     margin-top: 10px;
 }
 
+.exitbox button{
+    background-color: #f44336;
+    font-family:'Lora', serif ;
+    border-radius: 10px;
+    box-shadow: #d7680d;
+    
+}

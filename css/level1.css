@@ -22,6 +22,3 @@
 a {
     size: 100px;
 }
-body {
-    overflow: hidden; /* Verbergt de scrollbar */
-}

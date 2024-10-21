@@ -78,3 +78,14 @@ function moveImage(event) {
 window.addEventListener('keydown', moveImage);
 window.addEventListener('keyup', stopImage);
 update();
+
+function exitGame() {
+   if (confirm('Do you really want to exit the game?')) {
+       window.close();
+   }
+}
+function saveGame() {
+   if (confirm('Do you really want to save the game?')) {
+       window.save();
+   }
+}

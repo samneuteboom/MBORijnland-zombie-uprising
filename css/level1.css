@@ -1,5 +1,5 @@
 #bodyLevelOne {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Lora', serif;
     background-image: url(../img/ZombieLevelOne.png); 
     background-size: cover;
     background-position: left;
@@ -12,10 +12,21 @@
 }
 #lopen {
     position: absolute; /* Hierdoor kan de afbeelding vrij bewegen */
-    width: 800px; /* Pas de grootte van de afbeelding aan */
-    height: 1400; /* Houd de verhouding van de afbeelding */
+    width: 500px; /* Pas de grootte van de afbeelding aan */
+    height: 1100; /* Houd de verhouding van de afbeelding */
 }
-body {
-    overflow: hidden; /* Verbergt de scrollbalk */
-    margin: 0; /* Verwijdert standaard marges */
+.exit-btn{
+    position: absolute; 
+    top: 25px;          
+    right: 10px;        
+    background-color: #f44336; 
+    padding: 15px 30px;
+    border-radius: 10px;
+    box-shadow: #d7680d; 
+    color: #fff; 
+    font-size: 1.2em;
+    font-family: 'Lora', serif;
+}
+button:hover{
+    background-color:#d7680d ;
 }

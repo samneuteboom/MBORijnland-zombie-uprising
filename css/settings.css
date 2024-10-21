@@ -1,6 +1,21 @@
 h2 {
     opacity: 1;
 }
+/* Stijl voor de buitenste box */
+.settingbox {
+    margin-top:5%;
+    width: 265px;
+    height: 280px;
+    padding: 20px;
+    background-color:#d7680d;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: opacity 0.3s ease;
+    opacity: 0.85;
+    border-radius: 10px;
+    font-family: 'Lora', serif;
+
+}
 
 .settingtable{
     margin-left: 5%;
@@ -9,23 +24,12 @@ h2 {
     height: 150px;
     padding: 20px;
     text-align: center;
-    background-color: rgba(200, 200, 200, 1); /* Lichter grijs */
+    background-color:#f44336;
     border-radius: 10px;
     opacity: 1;
-}
+    font-family: 'Lora', serif;
 
-/* Stijl voor de box */
-.settingbox {
-    margin-top:5%;
-    width: 900px;
-    height: 400px;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.8 );
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: opacity 0.3s ease;
 }
-
-label, select, input, button {
+.label, select, input, button {
     font-size: 16px;
 }

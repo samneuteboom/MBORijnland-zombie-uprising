@@ -22,3 +22,31 @@
 a {
     size: 100px;
 }
+.exit-btn {
+    position: absolute; 
+    top: 25px;          
+    right: 15px;        
+    background-color: #f44336; 
+    padding: 15px 30px;
+    border-radius: 10px;
+    box-shadow: #d7680d; 
+    font-family: 'Lora', serif;
+    color: #ffffff;
+}
+
+.save-btn {
+    position: absolute; 
+    top: 25px;          
+    left: 15px;        
+    background-color: #f44336; 
+    padding: 15px 30px;
+    border-radius: 10px;
+    box-shadow: #d7680d; 
+    font-family: 'Lora', serif;
+    color: #ffffff;
+}
+
+.button:hover {
+    background: #d7680d;
+}
+

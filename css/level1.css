@@ -24,7 +24,7 @@ a {
 }
 .exit-btn {
     position: absolute; 
-    top: 25px;          
+    top: 18px;          
     right: 15px;        
     background-color: #f44336; 
     padding: 15px 30px;
@@ -32,11 +32,13 @@ a {
     box-shadow: #d7680d; 
     font-family: 'Lora', serif;
     color: #ffffff;
+    font-size: 1.2em;
+    border: none;
 }
 
 .save-btn {
     position: absolute; 
-    top: 25px;          
+    top: 18px;          
     left: 15px;        
     background-color: #f44336; 
     padding: 15px 30px;
@@ -44,6 +46,8 @@ a {
     box-shadow: #d7680d; 
     font-family: 'Lora', serif;
     color: #ffffff;
+    font-size: 1.2em;
+    border: none;
 }
 
 .button:hover {

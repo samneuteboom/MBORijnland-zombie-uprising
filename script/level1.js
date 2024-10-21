@@ -46,36 +46,35 @@ function update() {
 
     requestAnimationFrame(update);
 }
-
 function moveImage(event) {
     switch (event.key) {
-        case 'a':
-            moveLeft = true; 
-            break;
-        case 'd':
-            moveRight = true; 
-            break;
-        case ' ':
-            if (!isJumping) {
-                isJumping = true; 
-                verticalSpeed = jumpStrength; 
-            }
-            break;
+       case 'a':
+          moveLeft = true;
+          break;
+       case 'd':
+          moveRight = true;
+          break;
+       case ' ':
+          if (!isJumping) {
+             isJumping = true;
+             verticalSpeed = jumpStrength;
+          }
+          break;
     }
-}
-
-function stopImage(event) {
+ }
+ 
+ function stopImage(event) {
     switch (event.key) {
-        case 'a':
-            moveLeft = false; 
-            break;
-        case 'd':
-            moveRight = false; 
-            break;
+       case 'a':
+          moveLeft = false;
+          break;
+       case 'd':
+          moveRight = false;
+          break;
     }
-}
+ }
+ 
 
 window.addEventListener('keydown', moveImage);
 window.addEventListener('keyup', stopImage);
-
 update();

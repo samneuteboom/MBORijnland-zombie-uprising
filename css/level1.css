@@ -12,10 +12,6 @@
 }
 #lopen {
     position: absolute; /* Hierdoor kan de afbeelding vrij bewegen */
-    width: 800px; /* Pas de grootte van de afbeelding aan */
-    height: 1400; /* Houd de verhouding van de afbeelding */
-}
-body {
-    overflow: hidden; /* Verbergt de scrollbalk */
-    margin: 0; /* Verwijdert standaard marges */
+    width: 150px; /* Pas de grootte van de afbeelding aan */
+    height: 550; /* Houd de verhouding van de afbeelding */
 }

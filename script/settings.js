@@ -7,3 +7,7 @@ function setVolume(value) {
     console.log("Volume ingesteld op: " + value);
     // Voeg hier je game audio-logica toe, bijvoorbeeld aanpassen van audio-API.
 }
+
+// function closeSettings() {
+//     document.getElementById("settingsBox").style.display = "none";
+// }

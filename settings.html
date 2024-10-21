@@ -8,16 +8,20 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body id="bodyMain">
-    <div class="settingbox">
+    <div id="settingsBox" class="settingbox">
         <h2>Instellingen</h2>
         <div class="settingtable">
             <label for="volume">Volume: </label>
-        <input type="range" id="volume" name="volume" min="0" max="100" value="50" oninput="setVolume(this.value)">
-        <span id="volumeValue">50</span>
+            <input type="range" id="volume" name="volume" min="0" max="100" value="50" oninput="setVolume(this.value)">
+            <span id="volumeValue">50</span>
         </div>
 
-
+    
+        <div class="exitbox">
+            <button><a href="index.html">Exit</a></button>
+        </div>
     </div>
+
 </body>
 <script src="script/settings.js"></script>
 </html>

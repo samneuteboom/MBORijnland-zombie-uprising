@@ -23,6 +23,8 @@ function update() {
     }
       // Pas de positie van de afbeelding toe
       fallingImage.style.transform = `translate(${x}px, ${y}px)`;
+      const leftOffset = window.innerWidth / 4; // een kwart van de breedte van het scherm
+    window.scrollTo(x + leftOffset, window.scrollY); // zorgt ervoor dat de window alleen horizontaal beweegt en niet verticaal kan bewegen
      // Vraag de volgende frame aan
      requestAnimationFrame(update);
     }
@@ -35,6 +37,7 @@ function moveImage(event) {
     }
 }
 function stopImage(event) {
+    switch (event.key) { // heeft keuze uit meerdere variabale
         case 'a':
             moveLeft = false; // Stop met bewegen naar links
             break;

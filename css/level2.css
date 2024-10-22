@@ -16,9 +16,13 @@
     height: 550; /* Houd de verhouding van de afbeelding */
 }
 #Volgendlevel{
-    margin-left: 3817px;
+    margin-left: 3817px;    
     margin-top: -12px;
 }
 a {
     size: 100px;
 }
+body {
+    overflow-y: hidden; /* Hide vertical scrollbar */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+  }

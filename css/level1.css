@@ -10,10 +10,15 @@
     height: 100vh;
     margin: 0;
 }
-#lopen {
+#player {
     position: absolute; /* Hierdoor kan de afbeelding vrij bewegen */
     width: 150px; /* Pas de grootte van de afbeelding aan */
     height: 550; /* Houd de verhouding van de afbeelding */
+}
+#bullet1 {
+    position: absolute; /* Hierdoor kan de afbeelding vrij bewegen */
+    width: 50px; /* Pas de grootte van de afbeelding aan */
+    height: 50px; /* Houd de verhouding van de afbeelding */
 }
 #Volgendlevel{
     margin-left: 3817px;
@@ -21,4 +26,14 @@
 }
 a {
     size: 100px;
+}
+body {
+    overflow-y: hidden; /* Hide vertical scrollbar */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+.bullet {
+    position: absolute;
+    width: 115px; /* Pas de grootte aan indien nodig */
+    height: 60px;
+    background-image: url(../img/Bullet.png); /* Kleur van de kogel */
 }

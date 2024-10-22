@@ -2,8 +2,7 @@ const fallingImage = document.getElementById('lopen');
 let y = 100;
 let x = -530;
 const gravity = 0.5;
-const jumpStrength = 1
-2;
+const jumpStrength = 12;
 const maxSpeed = 6;
 const groundLevel = window.innerHeight - 650;
 const moveSpeed = 6;
@@ -36,7 +35,7 @@ function update() {
     }
 
     if (x < -670) x = -670; 
-    if (x > window.innerWidth - -4060) x = window.innerWidth - -4060; 
+    if (x > window.innerWidth - -3700) x = window.innerWidth - -3700; 
 
     if (!moveLeft && !moveRight) {
         fallingImage.style.transform = `translate(${x}px, ${y}px)`;

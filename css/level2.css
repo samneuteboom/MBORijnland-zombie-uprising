@@ -1,6 +1,6 @@
 #bodyLevelTwo {
     font-family: 'Lora', serif;
-    background-image: url(../img/zombie-2-3-pixilart.png); 
+    background-image: url(../img/pixil-frame-0\ \(5\).png); 
     background-size: cover;
     background-position: left;
     color: #ffffff;
@@ -9,4 +9,16 @@
     align-items: center;
     height: 100vh;
     margin: 0;
+}
+#lopen {
+    position: absolute; /* Hierdoor kan de afbeelding vrij bewegen */
+    width: 150px; /* Pas de grootte van de afbeelding aan */
+    height: 550; /* Houd de verhouding van de afbeelding */
+}
+#Volgendlevel{
+    margin-left: 3817px;
+    margin-top: -12px;
+}
+a {
+    size: 100px;
 }

@@ -15,65 +15,62 @@ let isJumping = false;
 let verticalSpeed = 0;
 
 function update() {
-    if (isJumping) {
-        y -= verticalSpeed; 
-        verticalSpeed -= gravity; 
+   if (isJumping) {
+      y -= verticalSpeed; 
+      verticalSpeed -= gravity; 
     }
 
-    if (y >= groundLevel) {
-        y = groundLevel; 
-        verticalSpeed = 0; 
-        isJumping = false; 
+   if (y >= groundLevel) {
+      y = groundLevel; 
+      verticalSpeed = 0; 
+      isJumping = false; 
     }
 
-    if (moveLeft) {
-        x -= moveSpeed; 
-        playerImage.style.transform = `translate(${x}px, ${y}px) scaleX(-1)`;
+   if (moveLeft) {
+      x -= moveSpeed; 
+      playerImage.style.transform = `translate(${x}px, ${y}px) scaleX(-1)`;
     }
-    if (moveRight) {
-        x += moveSpeed; 
-        playerImage.style.transform = `translate(${x}px, ${y}px) scaleX(1)`;
+   if (moveRight) {
+      x += moveSpeed; 
+      playerImage.style.transform = `translate(${x}px, ${y}px) scaleX(1)`;
     }
 
-    if (x < -670) x = -670; 
-    if (x > window.innerWidth - -500) x = window.innerWidth - -500; 
+   if (x < -670) x = -670; 
+   if (x > window.innerWidth - -500) x = window.innerWidth - -500; 
 
-    playerImage.style.transform = `translate(${x}px, ${y}px)`;
+   playerImage.style.transform = `translate(${x}px, ${y}px)`;
 
-    const leftOffset = window.innerWidth / 8;
-    window.scrollTo(x + leftOffset, window.scrollY);
+   const leftOffset = window.innerWidth / 8;
+   window.scrollTo(x + leftOffset, window.scrollY);
     
-    // Bullet position update
-   
-
     requestAnimationFrame(update);
 }
 
 function moveImage(event) {
-    switch (event.key) {
-       case 'a':
-          moveLeft = true;
-          break;
-       case 'd':
-          moveRight = true;
-          break;
-       case ' ':
-          if (!isJumping) {
-             isJumping = true;
-             verticalSpeed = jumpStrength;
-          }
-          break;
+   switch (event.key) {
+      case 'a':
+         moveLeft = true;
+         break;
+      case 'd':
+         moveRight = true;
+         break;
+      case ' ':
+         if (!isJumping) {
+            isJumping = true;
+            verticalSpeed = jumpStrength;
+         }
+         break;
     }
 }
 
 function stopImage(event) {
-    switch (event.key) {
-       case 'a':
-          moveLeft = false;
-          break;
-       case 'd':
-          moveRight = false;  
-          break;
+   switch (event.key) {
+      case 'a':
+         moveLeft = false;
+          reak;
+      case 'd':
+         moveRight = false;  
+         break;
     }
 }
 
@@ -110,12 +107,12 @@ update();
 
 function exitGame() {
    if (confirm('Do you really want to exit the game?')) {
-       window.close();
+      window.close();
    }
 }
 
 function saveGame() {
    if (confirm('Do you really want to save the game?')) {
-       window.save();
+      window.save();
    }
 }

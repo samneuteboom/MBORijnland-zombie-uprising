@@ -13,6 +13,10 @@ let moveLeft = false;
 let moveRight = false;
 let isJumping = false;
 let verticalSpeed = 0;
+let image = "./img/Anton Prajo 2.png";
+let idle = "./img/Anton Prajo 1.png";
+let gif = "./img/Anton hoofd gif.gif"
+let gifRotate = "./img/anton hoofd rotate.gif"
 
 function update() {
    if (isJumping) {
@@ -26,13 +30,16 @@ function update() {
       isJumping = false; 
     }
 
-   if (moveLeft) {
-      x -= moveSpeed; 
-      playerImage.style.transform = `translate(${x}px, ${y}px) scaleX(-1)`;
+    if (moveLeft) {
+        x -= moveSpeed; 
+        playerImage.style.transform = `translate(${x}px, ${y}px) scaleX(-1)`;
+      //   playerImage.setAttribute("src", gif);
     }
+    
    if (moveRight) {
       x += moveSpeed; 
       playerImage.style.transform = `translate(${x}px, ${y}px) scaleX(1)`;
+      // playerImage.setAttribute("src", gif);
     }
 
    if (x < -670) x = -670; 
@@ -50,9 +57,11 @@ function moveImage(event) {
    switch (event.key) {
       case 'a':
          moveLeft = true;
+         playerImage.setAttribute("src", gifRotate);
          break;
       case 'd':
          moveRight = true;
+         playerImage.setAttribute("src", gif);
          break;
       case ' ':
          if (!isJumping) {
@@ -67,38 +76,48 @@ function stopImage(event) {
    switch (event.key) {
       case 'a':
          moveLeft = false;
-          reak;
+         playerImage.setAttribute("src", idle);
+          break;
       case 'd':
-         moveRight = false;  
+         moveRight = false; 
+         playerImage.setAttribute("src", idle); 
          break;
     }
 }
 
 // Kogel schieten met de linkermuisklik
 window.addEventListener('click', shoot);
-
+var canshoot = true;
+var timeout = false;
 function shoot() {
-   const bullet = document.createElement('div');
-   bullet.classList.add('bullet'); 
-   bullet.style.position = 'absolute'; 
-   bullet.style.left = `${x + 720}px`; // Startpositie van de kogel
-   bullet.style.top = `${y - -300}px`; // Y-positie van de kogel
-   document.body.appendChild(bullet); // Voeg de kogel toe aan de body
+    if (canshoot) {
+        const bullet = document.createElement('div');
+        bullet.classList.add('bullet'); 
+        bullet.style.position = 'absolute'; 
+        bullet.style.left = `${x + 720}px`; // Startpositie van de kogel
+        bullet.style.top = `${y - -300}px`; // Y-positie van de kogel
+        document.body.appendChild(bullet); // Voeg de kogel toe aan de body
 
-   const bulletSpeed = 10; // Snelheid van de kogel
+        const bulletSpeed = 10; // Snelheid van de kogel
 
-   function moveBullet() {
-      bullet.style.left = `${parseFloat(bullet.style.left) + bulletSpeed}px`; // Beweeg naar rechts
-  
-      // Controleert of de kogel buiten het scherm is
-      if (parseFloat(bullet.style.left) > window.innerWidth + '-1px') { 
-         bullet.remove(); // Verwijder de kogel als deze ver buiten het scherm gaat
-     } else {
-         requestAnimationFrame(moveBullet); // Blijf de kogel bewegen
-     }
- }
-
- moveBullet(); // Start de beweging van de kogel
+        function moveBullet() {
+            bullet.style.left = `${parseFloat(bullet.style.left) + bulletSpeed}px`; // Beweeg naar rechts
+        
+            // Controleert of de kogel buiten het scherm is
+            if (parseFloat(bullet.style.left) > window.innerWidth + '-1px') { 
+                bullet.remove(); // Verwijder de kogel als deze ver buiten het scherm gaat
+            } else {
+                requestAnimationFrame(moveBullet); // Blijf de kogel bewegen
+            }
+            }
+            canshoot = false;
+            moveBullet(); // Start de beweging van de kogel
+    } else if (!timeout) {
+        timeout = setTimeout(function(){
+            canshoot = true;
+            timeout = false;
+        }, 1000);
+    }
 }
 
 window.addEventListener('keydown', moveImage);

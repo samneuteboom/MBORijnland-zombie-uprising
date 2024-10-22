@@ -62,8 +62,6 @@ function update() {
 
     // Houd de x-positie binnen de linker grens van -670 pixels
     if (x < -670) x = -670; 
-
-    // Houd de x-positie binnen de rechter grens, afhankelijk van de breedte van het venster
     if (x > window.innerWidth - -360) x = window.innerWidth - -360; 
 
     // Als het object niet beweegt, update alleen de positie zonder spiegeling

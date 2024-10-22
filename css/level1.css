@@ -27,6 +27,39 @@
 a {
     size: 100px;
 }
+.exit-btn {
+    position: absolute; 
+    top: 18px;          
+    right: 15px;        
+    background-color: #f44336; 
+    padding: 15px 30px;
+    border-radius: 10px;
+    box-shadow: #d7680d; 
+    font-family: 'Lora', serif;
+    color: #ffffff;
+    font-size: 1.2em;
+    border: none;
+}
+
+.save-btn {
+    position: absolute; 
+    top: 18px;          
+    left: 15px;        
+    background-color: #f44336; 
+    padding: 15px 30px;
+    border-radius: 10px;
+    box-shadow: #d7680d; 
+    font-family: 'Lora', serif;
+    color: #ffffff;
+    font-size: 1.2em;
+    border: none;
+}
+
+.button:hover {
+    background: #651a16da;
+}
+
+
 body {
     overflow-y: hidden; /* Hide vertical scrollbar */
     overflow-x: hidden; /* Hide horizontal scrollbar */

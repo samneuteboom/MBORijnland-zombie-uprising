@@ -1,5 +1,5 @@
-const bulletImage = document.getElementById('bullet1'); // Zorg ervoor dat dit de juiste ID is van je kogel
-const playerImage = document.getElementById('player'); // Zorg ervoor dat dit de juiste ID is van je speler
+const bulletImage = document.getElementById('bullet1'); 
+const playerImage = document.getElementById('player'); 
 let y = 100;
 let x = -530;
 const gravity = 0.5;
@@ -44,7 +44,7 @@ function update() {
     window.scrollTo(x + leftOffset, window.scrollY);
     
     // Bullet position update
-    bulletImage.style.transform = `translate(${x}px, ${y}px) scaleX(-1)`;
+   
 
     requestAnimationFrame(update);
 }
@@ -82,9 +82,9 @@ window.addEventListener('click', shoot);
 
 function shoot() {
    const bullet = document.createElement('div');
-   bullet.classList.add('bullet'); // Zorg ervoor dat je deze klasse in je CSS hebt
-   bullet.style.position = 'absolute'; // Zorg ervoor dat de kogel absoluut gepositioneerd is
-   bullet.style.left = `${x + 720}px`; // Startpositie van de kogel, iets rechts van de speler
+   bullet.classList.add('bullet'); 
+   bullet.style.position = 'absolute'; 
+   bullet.style.left = `${x + 720}px`; // Startpositie van de kogel
    bullet.style.top = `${y - -300}px`; // Y-positie van de kogel
    document.body.appendChild(bullet); // Voeg de kogel toe aan de body
 
@@ -93,8 +93,8 @@ function shoot() {
    function moveBullet() {
       bullet.style.left = `${parseFloat(bullet.style.left) + bulletSpeed}px`; // Beweeg naar rechts
   
-      // Controleer of de kogel buiten het scherm is
-      if (parseFloat(bullet.style.left) > window.innerWidth + '-1px') { // +50 zorgt ervoor dat het verder gaat
+      // Controleert of de kogel buiten het scherm is
+      if (parseFloat(bullet.style.left) > window.innerWidth + '-1px') { 
          bullet.remove(); // Verwijder de kogel als deze ver buiten het scherm gaat
      } else {
          requestAnimationFrame(moveBullet); // Blijf de kogel bewegen

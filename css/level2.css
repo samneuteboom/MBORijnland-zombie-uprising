@@ -26,3 +26,9 @@ body {
     overflow-y: hidden; /* Hide vertical scrollbar */
     overflow-x: hidden; /* Hide horizontal scrollbar */
   }
+  .bullet {
+    position: absolute;
+    width: 115px; /* Pas de grootte aan indien nodig */
+    height: 60px;
+    background-image: url(../img/Bullet.png); /* Kleur van de kogel */
+}

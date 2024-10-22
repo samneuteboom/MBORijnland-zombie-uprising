@@ -15,11 +15,7 @@
     width: 150px; /* Pas de grootte van de afbeelding aan */
     height: 550; /* Houd de verhouding van de afbeelding */
 }
-#bullet1 {
-    position: absolute; /* Hierdoor kan de afbeelding vrij bewegen */
-    width: 50px; /* Pas de grootte van de afbeelding aan */
-    height: 50px; /* Houd de verhouding van de afbeelding */
-}
+
 #Volgendlevel{
     margin-left: 3817px;
     margin-top: -12px;

@@ -23,8 +23,6 @@ function update() {
     }
       // Pas de positie van de afbeelding toe
       fallingImage.style.transform = `translate(${x}px, ${y}px)`;
-      const leftOffset = window.innerWidth / 4;
-    window.scrollTo(x + leftOffset, window.scrollY);
      // Vraag de volgende frame aan
      requestAnimationFrame(update);
     }
@@ -37,7 +35,6 @@ function moveImage(event) {
     }
 }
 function stopImage(event) {
-    switch (event.key) {
         case 'a':
             moveLeft = false; // Stop met bewegen naar links
             break;

@@ -44,5 +44,5 @@ input[type=range] {
     font-family:'Lora', serif ;
     border-radius: 10px;
     box-shadow: #d7680d;
-    
+    border: none;
 }

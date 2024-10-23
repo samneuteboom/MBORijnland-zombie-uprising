@@ -15,10 +15,18 @@
     width: 150px; /* Pas de grootte van de afbeelding aan */
     height: 550; /* Houd de verhouding van de afbeelding */
 }
+#zombieImage {
+    position: absolute; /* Hierdoor kan de afbeelding vrij bewegen */
+    width: 250px; /* Pas de grootte van de afbeelding aan */
+    height: 650; /* Houd de verhouding van de afbeelding */ 
+}
 
 #Volgendlevel{
     margin-left: 3817px;
     margin-top: -12px;
+    padding: 30px;
+    width: -100px;
+    height: 10px;
 }
 a {
     size: 100px;
@@ -66,3 +74,4 @@ body {
     height: 60px;
     background-image: url(../img/Bullet.png); /* Kleur van de kogel */
 }
+

@@ -39,3 +39,5 @@ function exitGame() {
         window.close();
     }
 }
+backgroundMusic1.volume = 1
+backgroundMusic.volume = 0.2

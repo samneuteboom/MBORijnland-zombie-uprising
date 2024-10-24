@@ -25,6 +25,15 @@
     <div>
         <button class="button save-btn"onclick="saveGame()">Save</button>
     </div>
+    <div id="deathScreen" class="overlay">
+        <div class="deathMessage">
+            <h1>Game Over</h1>
+            <p>Je bent dood!</p>
+            <button onclick="restartGame()">Opnieuw Spelen</button>
+            <button onclick="exitGame()">Verlaten</button>
+        </div>
+        <div id="healthDisplay">Health: 100</div>
+        
     <script src="script/level1.js"></script>
 </body>
 </html>
